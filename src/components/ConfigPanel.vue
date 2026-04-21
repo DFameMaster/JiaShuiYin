@@ -290,7 +290,7 @@ const fontStyleOptions = [
 const config = reactive({ ...defaultWatermarkConfig })
 const batchFormat = ref('png')
 const namingMode = ref('original')
-const customName = ref('qitongtingyu')
+const customName = ref('栖桐听雨')
 const nameSeparator = ref('-')
 const numberFormat = ref('3')
 

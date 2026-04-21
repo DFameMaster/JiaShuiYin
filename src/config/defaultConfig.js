@@ -1,5 +1,5 @@
 export const defaultWatermarkConfig = {
-  text: '仅供qitongtingyu使用',
+  text: '仅供栖桐听雨使用',
   watermarkStyle: 'grid',
   font: 'Microsoft YaHei',
   fontSize: 20,

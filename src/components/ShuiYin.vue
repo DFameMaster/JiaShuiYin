@@ -1,6 +1,6 @@
 <template>
   <div class="shuiyin-app">
-    <h1 class="app-title">加水印-qitongtingyu</h1>
+    <h1 class="app-title">加水印-栖桐听雨</h1>
     
     <!-- 上传前只显示上传区域 -->
     <div v-if="images.length === 0" class="upload-section">
