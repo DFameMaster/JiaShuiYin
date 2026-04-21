@@ -1,0 +1,362 @@
+:root {
+  --font-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono:
+    "SF Mono", Monaco, Inconsolata, "Roboto Mono", Consolas, "Courier New",
+    monospace;
+}
+
+/* CSS 初始化 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 重置文档 */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+/* 重置 body */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-font-smoothing: antialiased;
+}
+
+/* 浏览器兼容性修复 */
+/* IE10+ 滚动条样式 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* IE10+ 特定样式 */
+  body {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
+
+/* Edge 浏览器修复 */
+@supports (-ms-ime-align: auto) {
+  /* Edge 特定样式 */
+  input {
+    -ms-ime-align: auto;
+  }
+}
+
+/* Firefox 浏览器修复 */
+@-moz-document url-prefix() {
+  /* Firefox 特定样式 */
+  button {
+    background-image: none;
+  }
+}
+
+/* Safari 浏览器修复 */
+@media not all and (min-resolution: 0.001dpcm) {
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+  }
+}
+
+/* 重置标题 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #212529;
+}
+
+/* 重置段落 */
+p {
+  margin: 0;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 重置链接 */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* 重置图片 */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+/* 重置表单元素 */
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* 重置表格 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 重置代码 */
+code,
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+/* 重置块引用 */
+blockquote {
+  margin: 0;
+}
+
+/* 重置 hr */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: 0;
+  border-top: 1px solid #e9ecef;
+}
+
+/* 重置 sup 和 sub */
+sup,
+sub {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 重置 button 和 input[type="button"], input[type="reset"], input[type="submit"] */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+/* 重置 fieldset */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+  margin: 0;
+  border: 1px solid #ced4da;
+}
+
+/* 重置 legend */
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+
+/* 重置 progress */
+progress {
+  vertical-align: baseline;
+}
+
+/* 重置 textarea */
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+/* 重置 input[type="search"] */
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* 重置 input[type="number"] */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* 重置 input[type="number"] for Firefox */
+[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* 重置 input[type="search"] */
+[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* 重置 input[type="search"]::-webkit-search-decoration */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* 重置 ::-webkit-file-upload-button */
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+/* 重置 ::placeholder */
+::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+/* 重置 [hidden] */
+[hidden] {
+  display: none !important;
+}
+
+/* 响应式图片 */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+/* 媒体查询兼容性 */
+@media print {
+  *,
+  *::before,
+  *::after {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  button {
+    break-inside: avoid;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+  }
+}
+
+/* 减少动画模式支持 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
