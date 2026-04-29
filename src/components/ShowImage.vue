@@ -174,7 +174,7 @@ const downloadImage = (format) => {
 
   const dataURL = canvas.toDataURL(mimeType, 0.9)
   const link = document.createElement('a')
-  link.download = `watermark_${Date.now()}.${extension}`
+  link.download = `qitongtingyu_${Date.now()}.${extension}`
   link.href = dataURL
   link.click()
 }
